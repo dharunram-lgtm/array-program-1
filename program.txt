@@ -1,0 +1,356 @@
+Row with maximum sum
+
+#include <stdio.h>
+
+int main() {
+    int r, c;
+    scanf("%d%d", & r, & c);
+    int arr[r][c];
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            scanf("%d", & arr[i][j]);
+        }
+    }
+    int mi = 0, maxsum = 0;
+    for (int i = 0; i < r; i++) {
+        int sum = 0;
+        for (int j = 0; j < c; j++) {
+            sum += arr[i][j];
+
+        }
+        if (sum > maxsum)
+        {
+            maxsum = sum;
+            mi = i;
+        }
+    }
+
+ for (int i = 0; i < r; i++) {
+    printf("%d ", arr[mi][i]);
+}
+
+}
+
+
+
+Matrix addition
+
+
+#include <stdio.h>
+
+int main() {
+    int r, c;
+    scanf("%d%d", & r, & c);
+    int arr[r][c];
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            scanf("%d", & arr[i][j]);
+        }
+    }
+
+    int a, b;
+    scanf("%d%d", & a, & b);
+    int arr1[a][b];
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            scanf("%d", & arr1[i][j]);
+        }
+    }
+
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            printf("%d ", arr[i][j] + arr1[i][j]);
+
+        }
+        printf("\n");
+
+    }
+
+
+
+}
+
+
+
+Sum of all elements
+
+
+    int a, b;
+    scanf("%d%d", & a, & b);
+    int arr1[a][b];
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            scanf("%d", & arr1[i][j]);
+        }
+    }
+     int sum=0;
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+           sum+=arr[i][j];
+        }
+    } printf("%d ", sum);
+}
+
+Average of matrix
+
+int a, b;
+    scanf("%d%d", & a, & b);
+    int arr1[a][b];
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            scanf("%d", & arr1[i][j]);
+        }
+    }
+     int sum=0;
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+           sum+=arr[i][j];
+        }
+    } printf("%d ", sum/(n*m);
+}
+
+Sum of each row
+
+int a, b;
+    scanf("%d%d", & a, & b);
+    int arr1[a][b];
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            scanf("%d", & arr1[i][j]);
+        }
+    }
+     
+    for (int i = 0; i < r; i++) {
+       int sum=0;
+        for (int j = 0; j < c; j++) {
+           sum+=arr[i][j];
+        }printf("%d ", sum);
+    }
+}
+
+Sum of each column
+
+
+int main() {
+int a, b;
+    scanf("%d%d", & a, & b);
+    int arr[a][b];
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            scanf("%d", & arr[i][j]);
+        }
+    }
+     
+    for (int i = 0; i < a; i++) {
+       int sum=0;
+        for (int j = 0; j < b; j++) {
+           sum+=arr[j][i];
+        }printf("%d ", sum);
+    }
+}
+Sum of both diagonals
+int main() {
+    int a, b;
+    scanf("%d%d", & a, & b);
+    int arr[a][b];
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            scanf("%d", & arr[i][j]);
+        }
+    }
+    int sum = 0;
+    for (int i = 0; i < a; i++) {
+
+        for (int j = 0; j < b; j++) {
+            if (i == j || i + j== 2)
+                sum += arr[i][j];
+        }
+    }
+    printf("%d ", sum);
+}
+Maximum element in matrix
+int a, b;
+    scanf("%d%d", & a, & b);
+    int arr[a][b];
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            scanf("%d", & arr[i][j]);
+        }
+    }
+    int sum = arr[0][0];
+    for (int i = 0; i < a; i++) {
+
+        for (int j = 0; j < b; j++) {
+            if (sum<arr[i][j])
+                sum = arr[i][j];
+        }
+    }
+  printf("%d ", sum);
+}
+
+Minimum element in matrix
+
+int a, b;
+    scanf("%d%d", & a, & b);
+    int arr[a][b];
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            scanf("%d", & arr[i][j]);
+        }
+    }
+    int sum = arr[0][0];
+    for (int i = 0; i < a; i++) {
+
+        for (int j = 0; j < b; j++) {
+            if (sum>arr[i][j])
+                sum = arr[i][j];
+        }
+    }
+  printf("%d ", sum);
+}
+
+Maximum of each row
+
+
+int a, b;
+    scanf("%d%d", & a, & b);
+    int arr[a][b];
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            scanf("%d", & arr[i][j]);
+        }
+    }
+   
+    for (int i = 0; i < a; i++) {
+
+       int sum = 0;
+        for (int j = 0; j < b; j++) {
+            if (sum<arr[i][j])
+                sum = arr[i][j];
+        }
+    } printf("%d ", sum);
+}
+90 clockwise
+#include <stdio.h>
+
+int main() {
+    int r,c;
+    scanf("%d%d",&r,&c);
+    int arr[r][c];
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    for(int i=0;i<r;i++){
+        for(int j=i+1;j<c;j++){
+            int temp=arr[i][j];
+            arr[i][j]=arr[j][i];
+            arr[j][i]=temp;
+        }
+    }
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            int temp=arr[i][0];
+            arr[i][0]=arr[i][c-1];
+            arr[i][c-1]=temp;
+        }
+    }
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    
+}
+
+
+transpose
+#include <stdio.h>
+
+int main() {
+        int r, c;
+        scanf("%d%d", & r, & c);
+        int arr[r][c];
+        for (int i = 0; i < r; i++) {
+                for (int j = 0; j < c; j++) {
+                        scanf("%d", & arr[i][j]);
+                }
+        }
+        for (int i = 0; i < r; i++) {
+                for (int j = i + 1; j < c; j++) {
+                        int temp = arr[i][j];
+                        arr[i][j] = arr[j][i];
+                        arr[j][i] = temp;
+                }
+
+        }
+        for (int i = 0; i < r; i++) {
+                for (int j = 0; j < c; j++) {
+                        int temp = arr[i][0];
+                        arr[i][0] = arr[i][r - 1];
+                        arr[i][r - 1] = temp;
+
+                }
+
+        }
+        for (int i = 0; i < r; i++) {
+                for (int j = 0; j < c; j++) {
+                        printf("%d ", arr[i][j]);
+                }
+
+                printf("\n");
+        }
+
+}
+
+tranpose place
+#include <stdio.h>
+
+int main() {
+        int r, c;
+        scanf("%d%d", & r, & c);
+        int arr[r][c];
+        for (int i = 0; i < r; i++) {
+                for (int j = 0; j < c; j++) {
+                        scanf("%d", & arr[i][j]);
+                }
+        }
+        for (int i = 0; i < r; i++) {
+                for (int j = i + 1; j < c; j++) {
+                        int temp = arr[i][j];
+                        arr[i][j] = arr[j][i];
+                        arr[j][i] = temp;
+                }
+
+        }
+        for (int i = 0; i < r; i++) {
+                for (int j = 0; j < c; j++) {
+                        printf("%d ", arr[i][j]);
+                }
+
+                printf("\n");
+        }
+
+}
+
+max element in row
+int a, b;
+    scanf("%d%d", & a, & b);
+    int arr[a][b];
+    for (int i = 0; i < a; i++) {
+        for (int j = 0; j < b; j++) {
+            scanf("%d", & arr[i][j]);
+        }
+    }
+   
+    for (int i = 0; i < a; i++) {
+
+       int sum = 0;
+        for (int j = 0; j < b; j++) {
+            if (sum<arr[i][j])
+                sum = arr[i][j];
+        }
+    } printf("%d ", sum);
+}
